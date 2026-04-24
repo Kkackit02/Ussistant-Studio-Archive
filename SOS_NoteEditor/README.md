@@ -1,0 +1,179 @@
+# SOS NoteEditor
+
+Sound of Slash 전용 비트맵 에디터.
+
+---
+
+## 📋 개요
+
+| 항목 | 내용 |
+|------|------|
+| **참여 기간** | 2024.12 – 2026.01 (약 13개월) |
+| **커밋 수** | 60개 |
+| **역할** | 그리드 엔진 재설계 · 핵심 편집 시스템 구현 · 신규 노트 타입 추가 |
+| **Tech Stack** | Unity C# · JSON (LitJson / JsonUtility) · LINQ |
+
+> 기존 팀원들이 구축한 코드베이스에 합류하여,  
+> 그리드 엔진의 구조적 불안정을 근본적으로 해결하고  
+> DragSystem · BeatSnap Divisor · Undo/Redo 등 핵심 편집 기능을 직접 설계·구현했습니다.
+
+---
+
+## 📸 스크린샷
+
+<!-- 스크린샷을 여기에 추가해주세요 -->
+<table>
+  <tr>
+    <td align="center"><img src="" width="380"/><br/><sub>에디터 전체 뷰</sub></td>
+    <td align="center"><img src="" width="380"/><br/><sub>노트 배치 화면</sub></td>
+  </tr>
+</table>
+
+---
+
+## 🌿 브랜치 전략
+
+```
+Note_Editor_JGN  ──── 2024.12 ~ 2025.01.15 (v0.3.7)
+                             │
+                             └── Editor_Refectoring_2025 (2025.01.18 ~)
+                                       ├── PR #6 → main  (v0.4.0,  2025.02.01)
+                                       ├── PR #7 → main  (v0.4.2,  2025.02.15)
+                                       ├── PR #8 → main  (v0.4.3,  2025.02.27)
+                                       └── Direct → main (v0.4.5,  2025.04.14)
+```
+
+main 안정성을 위해 브랜치를 분리하고, 기능 완성 시점마다 점진적 PR 머지 전략을 택했습니다.
+
+---
+
+## 🛠 주요 구현
+
+### 1. 그리드 엔진 재설계 (v0.4.0)
+
+기존 그리드 시스템의 구조적 불안정을 근본적으로 해결하기 위해
+초기화 로직·스크롤 연동·풀링 구조를 재설계했습니다.
+
+- `GridManager.cs` +137줄 — 스크롤휠 타임라인, 재생 슬라이더, ResetGrid 재설계
+- 총 변경량: 9개 파일, **498줄 추가 / 904줄 삭제**
+
+---
+
+### 2. DragSystem — 처음부터 작성
+
+`DragManager.cs`(205줄) + `DragArea.cs`(45줄) 신규 작성.
+
+드래그 범위 내 첫 번째 ~ 마지막 그리드의 시간 차이를 자동 계산해
+Holding / BackToBack 노트의 `length`로 설정합니다.
+
+```csharp
+public void SetChineNote(List<Grid> selectedGrid) {
+    float length = (float)(
+        GridManager.instance.ConvertBeatToTime(selectedGrid[selectedGrid.Count - 1]._data.beatIndex)
+        - GridManager.instance.ConvertBeatToTime(selectedGrid[0]._data.beatIndex)
+    );
+    selectedGrid[0].SetNoteData(true, GridManager.NoteType.Holding, length);
+}
+```
+
+4개 트랙(Left / Right / LeftTop / RightTop)을 독립적으로 관리.
+
+---
+
+### 3. Object Pooling — 무한 타임라인 스크롤
+
+화면에 보이는 셀(`initCount = 15`)만 유지,
+셀이 화면 밖으로 나가면 반대쪽에서 재활용.
+
+```csharp
+private void FrontPooling() {
+    _data.beatIndex += GridManager.instance.initCount;
+    UpdateGridData(); // 새 beatIndex의 노트 데이터로 갱신
+}
+```
+
+곡 길이와 무관하게 GC 없이 부드러운 무한 스크롤 구현.
+
+---
+
+### 4. BeatSnap Divisor (osu! 방식)
+
+Divisor 변경 시 기존 노트의 `beatIndex`를 **비율로 재매핑**합니다.
+(기존 코드는 `InitGrid()` 전체 초기화 → 노트 소실 문제)
+
+```csharp
+public void SetBeatSnapDivisor(int value) {
+    int leastBeatSnapDivisor = beatSnapDivisor;
+    beatSnapDivisor = value;
+    UpdateNotesForNewDivisor(leftGridList,     leastBeatSnapDivisor, beatSnapDivisor);
+    UpdateNotesForNewDivisor(rightGridList,    leastBeatSnapDivisor, beatSnapDivisor);
+    UpdateNotesForNewDivisor(leftTopGridList,  leastBeatSnapDivisor, beatSnapDivisor);
+    UpdateNotesForNewDivisor(rightTopGridList, leastBeatSnapDivisor, beatSnapDivisor);
+    ResetGridUI();
+}
+```
+
+`Destroy()` → `DestroyImmediate()` 교체: 같은 프레임 재생성 시 충돌 방지.
+
+---
+
+### 5. Undo/Redo — 전체 상태 스냅샷 방식
+
+Command Pattern 대신 `PanelData` 전체를 JSON으로 직렬화해 스택에 적재.
+새 노트 타입이 추가돼도 Undo/Redo 코드 수정 불필요.
+
+```csharp
+private Stack<string> undoStack = new Stack<string>();
+private Stack<string> redoStack = new Stack<string>();
+
+public void RecordSnapshot() {
+    undoStack.Push(JsonUtility.ToJson(_EditPanelData));
+    redoStack.Clear();
+}
+public void Undo() {
+    redoStack.Push(JsonUtility.ToJson(_EditPanelData));
+    _EditPanelData = JsonUtility.FromJson<PanelData>(undoStack.Pop());
+    SyncUI();
+    GridManager.instance.ResetGridUI();
+}
+```
+
+`BatchAction` 패턴으로 복합 행동(Holding 드래그 등)을 하나의 Undo 단위로 묶음.
+
+---
+
+### 6. JSON 중복 제거
+
+저장 시 같은 노트가 중복으로 기록되는 버그를 LINQ 한 줄로 해결.
+
+```csharp
+data.gridData = data.gridData
+    .GroupBy(gd => new { gd.NoteName, gd.time, gd.beatIndex })
+    .Select(g => g.First())
+    .ToList();
+```
+
+---
+
+### 7. Missile 노트 추가
+
+5개 파일 수정으로 신규 노트 타입을 에디터 전체에 통합.
+
+- `GridManager.cs` — `NoteType` enum에 `Missile` 추가
+- `Grid.cs` — 스프라이트 표시 및 데이터 분기 처리
+- `ShortCutManager.cs` — 단축키 등록
+
+---
+
+## 📊 릴리즈 이력
+
+| 버전 | 날짜 | 핵심 변경 |
+|------|------|-----------|
+| **v0.3.7** | 2025.01.15 | DisplayNote · Hit Sound 안정화 |
+| **v0.4.0** | 2025.02.01 | 그리드 엔진 재설계 · DragSystem · Object Pooling |
+| **v0.4.1** | 2025.02.01 | Chain 삭제 · 분할선 핫픽스 |
+| **v0.4.2** | 2025.02.15 | Long Range 안정화 · JSON 중복 제거 |
+| **v0.4.3** | 2025.02.27 | BeatSnap Divisor 전 노트 타입 적용 |
+| **v0.4.5** | 2025.04.14 | 안정화 |
+| **v0.4.7** | 2025.10.18 | Missile 노트 · Unity 6000.2.8f1 |
+
