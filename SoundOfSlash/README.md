@@ -8,6 +8,7 @@
 [![Rating](https://img.shields.io/badge/Steam_Rating-90%25_Positive-brightgreen?style=flat-square)](https://store.steampowered.com/app/3036410/)
 [![Early Access](https://img.shields.io/badge/Early_Access-2024.09.02-f4a42a?style=flat-square)](https://store.steampowered.com/app/3036410/)
 [![Studio](https://img.shields.io/badge/Ussistant_Studio-Website-blueviolet?style=flat-square)](https://www.ussistantstudio.com/)
+[![GDWC](https://img.shields.io/badge/GDWC-Game_Feature-orange?style=flat-square)](https://thegdwc.com/pages/game.php?game_guid=23ae91a5-8dc6-4391-9069-121c82de85b5)
 
 **리듬 액션 게임 · PC (Steam) · Early Access**
 
