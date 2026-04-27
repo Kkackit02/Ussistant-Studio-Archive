@@ -45,12 +45,49 @@
 > 오염된 룬과 수호신을 정화하는 리듬 액션 게임.
 
 박자에 맞춰 노트를 처리하며 적을 쓰러뜨리는 **리듬 × 액션** 장르.
-누적 리뷰 **90% 긍정적** (Steam), BIC · CBF · G-STAR 등 **4회 오프라인 전시** 참가.
+누적 리뷰 **90% 긍정적** (Steam), BIC · G-STAR 등 주요 오프라인 전시 참가.
 
 ---
 
 ## 📸 스크린샷
 
+### ⚔️ 인게임 플레이
+<table width="100%">
+  <tr>
+    <td align="center" width="33%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/ingame_1.png" width="100%"/><br/>
+      <sub>인게임 플레이 (1)</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/ingame_2.png" width="100%"/><br/>
+      <sub>인게임 플레이 (2)</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/ingame_3.png" width="100%"/><br/>
+      <sub>인게임 플레이 (3)</sub>
+    </td>
+  </tr>
+</table>
+
+### 🧑 플레이어 스킨
+<table width="100%">
+  <tr>
+    <td align="center" width="33%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/player_normal.png" height="200"/><br/>
+      <sub>Normal</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/player_desert.png" height="200"/><br/>
+      <sub>Desert</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/player_infernal.png" height="200"/><br/>
+      <sub>Infernal</sub>
+    </td>
+  </tr>
+</table>
+
+### 🖥️ 시스템 UI
 <table width="100%">
   <tr>
     <td align="center" width="33%">
@@ -68,20 +105,6 @@
   </tr>
   <tr>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/ingame_1.png" width="100%"/><br/>
-      <sub>⚔️ 인게임 플레이 (Forest)</sub>
-    </td>
-    <td align="center">
-      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/ingame_2.png" width="100%"/><br/>
-      <sub>⚔️ 인게임 플레이 (Horror)</sub>
-    </td>
-    <td align="center">
-      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/tutorial.png" width="100%"/><br/>
-      <sub>📖 튜토리얼</sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
       <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/shop_skin.png" width="100%"/><br/>
       <sub>🛒 상점 — 스킨</sub>
     </td>
@@ -89,20 +112,9 @@
       <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/battlepass.png" width="100%"/><br/>
       <sub>🏆 배틀패스</sub>
     </td>
-    <td align="center" valign="middle">
-      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/player_normal.png" height="160"/>&nbsp;
-      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/player_infernal.png" height="160"/><br/>
-      <sub>🧑 플레이어 스킨 (Normal · Infernal)</sub>
-    </td>
-  </tr>
-  <tr>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/ingame_3.png" width="100%"/><br/>
-      <sub>⚔️ 인게임 플레이 (Horror)</sub>
-    </td>
-    <td align="center" colspan="2">
-      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/char_horror.png" height="200"/><br/>
-      <sub>🦇 Horror 스테이지 캐릭터</sub>
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/tutorial.png" width="100%"/><br/>
+      <sub>📖 튜토리얼</sub>
     </td>
   </tr>
 </table>
