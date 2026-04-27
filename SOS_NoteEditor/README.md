@@ -22,13 +22,16 @@ Sound of Slash 전용 비트맵 에디터.
 
 ## 📸 스크린샷
 
-<!-- 스크린샷을 여기에 추가해주세요 -->
-<table>
+<table width="100%">
   <tr>
-    <td align="center"><img src="" width="380"/><br/><sub>에디터 전체 뷰</sub></td>
-    <td align="center"><img src="" width="380"/><br/><sub>노트 배치 화면</sub></td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SOS_NoteEditor/images/shortcuts.png" width="100%"/><br/>
+      <sub>⌨️ 단축키 레이아웃 — 15개 기능키 + 재생 컨트롤</sub>
+    </td>
   </tr>
 </table>
+
+> 실제 에디터 화면 스크린샷은 추후 추가 예정입니다.
 
 ---
 
