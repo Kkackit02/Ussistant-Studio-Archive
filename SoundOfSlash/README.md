@@ -91,14 +91,49 @@
 
 ---
 
-## 🎪 오프라인 전시 (4회)
+## 🎪 오프라인 전시
 
-| 전시명 | 기간 | 빌드 |
+| 전시명 | 기간 | 비고 |
 |--------|------|------|
 | **BIC** (Busan Indie Connect) | 2024-08 | v0.1.32 |
-| **CBF** (콘텐츠 비즈니스 포럼) | 2024-10-22~24 | v0.3.3 |
+| **CBF** (콘텐츠 비즈니스 포럼) | 2024-10-22~24 | v0.3.4 |
 | **G-STAR 2024** | 2024-11-13~15 | v0.3.x |
-| **G-STAR 2025** | 2025-11 | EvilWood 노트 포함 |
+| **경희대 아트코리아랩** 아트&테크 창업 지원 사업 성과 전시 | 2024-11 | 경희대학교 디지털콘텐츠학과 |
+| **경희대 LINC 3.0** 캡스톤 경진대회 | 2024-11-06 | 최우수상 수상 |
+| **G-STAR 2025** | 2025-11 | — |
+
+<table width="100%">
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/exhibit_gstar_banner.jpg" width="100%"/><br/>
+      <sub>G-STAR 2024 — 대형 배너 부스</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/exhibit_gstar_booth.jpg" width="100%"/><br/>
+      <sub>G-STAR 2024 — Sound of Slash · Last of Penguin 공동 부스</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/exhibit_gstar_play.jpg" width="100%"/><br/>
+      <sub>G-STAR 2024 — 관람객 플레이</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/exhibit_geens.jpeg" width="100%"/><br/>
+      <sub>경희대 아트코리아랩 아트&테크 창업 지원 사업 성과 전시</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/exhibit_capstone_booth.jpeg" width="100%"/><br/>
+      <sub>경희대 LINC 3.0 캡스톤 경진대회 부스</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/exhibit_capsone_award.jpeg" width="100%"/><br/>
+      <sub>경희대 LINC 3.0 캡스톤 경진대회 최우수상</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
