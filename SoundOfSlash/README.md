@@ -12,6 +12,23 @@
 
 **리듬 액션 게임 · PC (Steam) · Early Access**
 
+<table width="100%">
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://www.youtube.com/watch?v=UdffOXzfneM">
+        <img src="https://img.youtube.com/vi/UdffOXzfneM/maxresdefault.jpg" width="100%"/>
+        <br/><sub>▶ Alpha Trailer</sub>
+      </a>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://www.youtube.com/watch?v=qDD0DnUgXaM">
+        <img src="https://img.youtube.com/vi/qDD0DnUgXaM/maxresdefault.jpg" width="100%"/>
+        <br/><sub>▶ 스플래시 영상</sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
 </div>
 
 ---
