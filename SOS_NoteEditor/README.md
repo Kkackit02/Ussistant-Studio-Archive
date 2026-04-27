@@ -197,6 +197,19 @@ float hitOffset = calibrationOffsetSeconds + offset;
 
 이 변환 누락이 원인이 된 에디터-인게임 타이밍 불일치 버그(2024-07)를 해결한 핵심 로직.
 
+### 8. Offset / Calibration — 타이밍 정합성 확보
+
+에디터(ms 단위)와 인게임(seconds 단위) 간의 시간 단위 불일치로 인한 채보 밀림 현상을 해결한 핵심 변환 로직입니다.
+
+```csharp
+// 에디터 ms 값을 인게임 초 단위로 변환하며 유저 캘리브레이션 값 합산
+float calibrationOffsetSeconds = ((float)PlayerPrefs.GetInt("CALIBRATION_RESULT_MS", 0) / 1000.0f);
+float hitOffset = (msValue * 0.001f) + calibrationOffsetSeconds;
+```
+
+- **데이터 포맷 통일**: 에디터와 인게임이 동일한 JSON 스키마를 공유하도록 재설계하여 데이터 파싱 오류 원천 차단.
+- **정밀도 보정**: `0.001f` 곱셈 연산을 통해 밀리초 단위의 정밀한 노트를 모든 플랫폼에서 동일한 타이밍에 재생.
+
 ---
 
 ### 9. MIDI + DNN v3.0 채보 자동 생성 파이프라인 (2026-04)
