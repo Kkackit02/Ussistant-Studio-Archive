@@ -95,6 +95,16 @@
       <sub>🧑 플레이어 스킨 (Normal · Infernal)</sub>
     </td>
   </tr>
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/ingame_3.png" width="100%"/><br/>
+      <sub>⚔️ 인게임 플레이 (Horror)</sub>
+    </td>
+    <td align="center" colspan="2">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/char_horror.png" height="200"/><br/>
+      <sub>🦇 Horror 스테이지 캐릭터</sub>
+    </td>
+  </tr>
 </table>
 
 ---
@@ -112,6 +122,31 @@
 | **BackToBack** | 연속 입력 | 박쥐 | 타이밍 누적 판정 |
 | **Long Range** (EvilWood) | 포물선 노트 | EvilWood | 좌우에서 EvilWood 캐릭터가 등장해 포물선 노트 발사 |
 | **Missile** | 발사체 노트 | 부엉이 | 부엉이 몬스터가 등장해 플레이어를 향해 노트 발사 |
+
+<table width="100%">
+  <tr>
+    <td align="center" width="20%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/note_combo.png" width="100%"/><br/>
+      <sub>Combo — Golem</sub>
+    </td>
+    <td align="center" width="20%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/note_hold.png" width="100%"/><br/>
+      <sub>Hold — 드래곤</sub>
+    </td>
+    <td align="center" width="20%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/note_backtobback.png" width="100%"/><br/>
+      <sub>BackToBack — 박쥐</sub>
+    </td>
+    <td align="center" width="20%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/note_evilwood.png" width="100%"/><br/>
+      <sub>Long Range — EvilWood</sub>
+    </td>
+    <td align="center" width="20%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/note_missile.png" width="100%"/><br/>
+      <sub>Missile — 부엉이</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
