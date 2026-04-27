@@ -24,14 +24,32 @@ Sound of Slash 전용 비트맵 에디터.
 
 <table width="100%">
   <tr>
-    <td align="center">
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SOS_NoteEditor/images/editor_screenshot_1.png" width="100%"/><br/>
+      <sub>💻 에디터 메인 화면 — 그리드 및 타임라인</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SOS_NoteEditor/images/editor_screenshot_2.png" width="100%"/><br/>
+      <sub>⚙️ 에디터 설정 및 인스펙터</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SOS_NoteEditor/images/editor_screenshot_3.png" width="100%"/><br/>
+      <sub>🎵 채보 편집 및 프리뷰</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SOS_NoteEditor/images/editor_screenshot_4.png" width="100%"/><br/>
+      <sub>📊 데이터 관리 및 익스포트</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
       <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SOS_NoteEditor/images/shortcuts.png" width="100%"/><br/>
       <sub>⌨️ 단축키 레이아웃 — 15개 기능키 + 재생 컨트롤</sub>
     </td>
   </tr>
 </table>
-
-> 실제 에디터 화면 스크린샷은 추후 추가 예정입니다.
 
 ---
 
