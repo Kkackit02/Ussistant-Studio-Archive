@@ -43,12 +43,7 @@ Sound of Slash 전용 비트맵 에디터.
       <sub>📊 데이터 관리 및 익스포트</sub>
     </td>
   </tr>
-  <tr>
-    <td align="center" colspan="2">
-      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SOS_NoteEditor/images/shortcuts.png" width="100%"/><br/>
-      <sub>⌨️ 단축키 레이아웃 — 15개 기능키 + 재생 컨트롤</sub>
-    </td>
-  </tr>
+
 </table>
 
 ---
