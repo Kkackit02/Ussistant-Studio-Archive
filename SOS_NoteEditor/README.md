@@ -35,9 +35,9 @@ Sound of Slash 전용 비트맵 에디터.
 ## 🌿 브랜치 전략
 
 ```
-Note_Editor_JGN  ──── 2024.12 ~ 2025.01.15 (v0.3.7)
+Note_Editor_JGN  ──── 2025.01.07 ~ 2025.01.15 (v0.3.7, 참여 초기 안정화)
                              │
-                             └── Editor_Refectoring_2025 (2025.01.18 ~)
+                             └── Editor_Refectoring_2025 (2025.01.18 ~, 전면 리팩토링)
                                        ├── PR #6 → main  (v0.4.0,  2025.02.01)
                                        ├── PR #7 → main  (v0.4.2,  2025.02.15)
                                        ├── PR #8 → main  (v0.4.3,  2025.02.27)
@@ -163,6 +163,37 @@ data.gridData = data.gridData
 - `GridManager.cs` — `NoteType` enum에 `Missile` 추가
 - `Grid.cs` — 스프라이트 표시 및 데이터 분기 처리
 - `ShortCutManager.cs` — 단축키 등록
+
+---
+
+### 8. Offset / Calibration 시스템
+
+에디터에서 저장하는 시간 값(ms 단위)과 인게임에서 읽는 시간 값(seconds 단위) 간 변환 로직.
+
+```csharp
+float calibrationOffsetSeconds = ((float)PlayerPrefs.GetInt("CALIBRATION_RESULT_MS", 0) / 1000.0f);
+float hitOffset = calibrationOffsetSeconds + offset;
+```
+
+- 에디터 저장 값: ms 단위
+- 인게임 로드 시: `× 0.001` 변환으로 seconds 단위로 처리
+- 유저 캘리브레이션 결과(`CALIBRATION_RESULT_MS`)와 합산하여 최종 판정 오프셋 산출
+
+이 변환 누락이 원인이 된 에디터-인게임 타이밍 불일치 버그(2024-07)를 해결한 핵심 로직.
+
+---
+
+### 9. MIDI + DNN v3.0 채보 자동 생성 파이프라인 (2026-04)
+
+```
+MIDI 파일 입력
+  → MIDI Parser: 음표 데이터 추출 (시간, 음높이, 길이)
+  → DNN v3.0: 리듬 패턴 예측 및 노트 배치 생성
+  → SOS JSON 포맷으로 변환
+  → 에디터에서 검토 및 수동 조정 가능
+```
+
+기획자가 MIDI 파일만 제공하면 기본 채보 초안을 자동 생성. 수작업 배치 시간을 대폭 단축.
 
 ---
 
