@@ -25,6 +25,56 @@
 
 ---
 
+## 📸 스크린샷
+
+<table width="100%">
+  <tr>
+    <td align="center" width="33%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/lobby.png" width="100%"/><br/>
+      <sub>🏠 메인 로비</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/mode_selection.png" width="100%"/><br/>
+      <sub>🎯 모드 선택</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/music_selection.png" width="100%"/><br/>
+      <sub>🎵 음악 선택</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/ingame_1.png" width="100%"/><br/>
+      <sub>⚔️ 인게임 플레이 (Forest)</sub>
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/ingame_2.png" width="100%"/><br/>
+      <sub>⚔️ 인게임 플레이 (Horror)</sub>
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/tutorial.png" width="100%"/><br/>
+      <sub>📖 튜토리얼</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/shop_skin.png" width="100%"/><br/>
+      <sub>🛒 상점 — 스킨</sub>
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/battlepass.png" width="100%"/><br/>
+      <sub>🏆 배틀패스</sub>
+    </td>
+    <td align="center" valign="middle">
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/player_normal.png" height="160"/>&nbsp;
+      <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SoundOfSlash/images/player_infernal.png" height="160"/><br/>
+      <sub>🧑 플레이어 스킨 (Normal · Infernal)</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 🎵 노트 타입
 
 | 노트 | 입력 방식 | 특징 |
