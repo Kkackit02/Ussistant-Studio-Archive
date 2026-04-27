@@ -40,7 +40,7 @@ Sound of Slash 전용 비트맵 에디터.
     </td>
     <td align="center" width="50%">
       <img src="https://raw.githubusercontent.com/Kkackit02/Ussistant-Studio-Archive/main/SOS_NoteEditor/images/editor_screenshot_4.png" width="100%"/><br/>
-      <sub>📊 데이터 관리 및 익스포트</sub>
+      <sub>🎵 채보 편집 및 프리뷰(2)</sub>
     </td>
   </tr>
 
