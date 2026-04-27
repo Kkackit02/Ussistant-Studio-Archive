@@ -91,25 +91,6 @@
 
 ---
 
-## 🌏 스테이지
-
-7종 스테이지 — Forest · Desert · Ocean · Horror · Iceland · Toyland · Volcano
-
-각 스테이지는 패럴랙스 스크롤 4레이어(Ground / ForeGround / MidGround / BackGround)로 구성.
-플레이어가 프로필에서 선택한 배경이 인게임에 즉시 반영됩니다.
-
----
-
-## ⚔️ 주요 콘텐츠
-
-- **BattlePass** — 시즌 기반 티어 보상 시스템 · Steam IAP 프리미엄 패스
-- **글로벌 리더보드** — Firebase 기반 전 세계 점수 순위
-- **BeatHelper** — osu! 스타일 비트 링으로 노트 타이밍 시각화
-- **BackToBack Monster** — 특수 몬스터 연속 등장 메카닉
-- **Offline 모드** — 네트워크 없이도 플레이, 재연결 시 자동 동기화
-
----
-
 ## 🎪 오프라인 전시 (4회)
 
 | 전시명 | 기간 | 빌드 |
